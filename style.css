@@ -1,0 +1,12 @@
+#main_title{
+    text-align: center;
+    background: #444;
+    color: #ffff;
+    padding: 20px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+#std_title{
+    text-align: center;
+    text-shadow: #444;
+}
