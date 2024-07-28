@@ -38,7 +38,12 @@
 </table>
 <?php
     if(isset($_GET['message'])){
-        echo "<h6>".$_GET['message']."</h6>";
+        echo "<h5>".$_GET['message']."</h5>";
+    }
+?>
+<?php
+    if(isset($_GET['insert_data_msg'])){
+        echo "<h6>".$_GET['insert_data_msg']."</h6>";
     }
 ?>
 <!-- Modal -->

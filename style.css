@@ -18,5 +18,9 @@
 }
 h6{
     text-align: center;
+    color: green;
+}
+h5{
+    text-align: center;
     color: red;
 }
