@@ -50,6 +50,17 @@
         echo "<h6>".$_GET['insert_data_msg']."</h6>";
     }
 ?>
+
+<?php
+    if(isset($_GET['update_msg'])){
+        echo "<h6>".$_GET['update_msg']."</h6>";
+    }
+?>
+<?php
+    if(isset($_GET['delete_msg'])){
+        echo "<h6>".$_GET['delete_msg']."</h6>";
+    }
+?>
 <!-- Modal -->
 <form action="insert_data.php" method="post">
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
