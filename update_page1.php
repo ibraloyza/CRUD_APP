@@ -20,9 +20,10 @@ if (isset($_GET['id'])) {
 if (isset($_POST['Update_students'])) {
     $fname = $_POST['f_name'];
     $lname = $_POST['l_name'];
+    $email = $_POST['email'];
     $age = $_POST['age'];
 
-    $query = "UPDATE `students` SET `first_name` = '$fname', `last_name` = '$lname', `age` = '$age' WHERE `id` = $id";
+    $query = "UPDATE `students` SET `first_name` = '$fname', `last_name` = '$lname', `email` = '$email', `age` = '$age' WHERE `id` = '$id'";
     $result = mysqli_query($connection, $query);
 
     if (!$result) {
@@ -36,15 +37,20 @@ if (isset($_POST['Update_students'])) {
 <form action="update_page1.php?id=<?php echo $id; ?>" method="post">
     <div class="form-group">
         <label for="f_name">First Name</label>
-        <input type="text" name="f_name" class="form-control" value="<?php echo isset($row['first_name']) ? htmlspecialchars($row['first_name']) : ''; ?>">
+        <input type="text" name="f_name" required class="form-control" value="<?php echo isset($row['first_name']) ? htmlspecialchars($row['first_name']) : ''; ?>">
     </div>
     <div class="form-group">
         <label for="l_name">Last Name</label>
-        <input type="text" name="l_name" class="form-control" value="<?php echo isset($row['last_name']) ? htmlspecialchars($row['last_name']) : ''; ?>">
+        <input type="text" name="l_name" required class="form-control" value="<?php echo isset($row['last_name']) ? htmlspecialchars($row['last_name']) : ''; ?>">
+    </div>
+    
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="email" name="email" required class="form-control" value="<?php echo isset($row['email']); ?>">
     </div>
     <div class="form-group">
         <label for="age">Age</label>
-        <input type="text" name="age" class="form-control" value="<?php echo isset($row['age']) ? htmlspecialchars($row['age']) : ''; ?>">
+        <input type="text" name="age" required class="form-control" value="<?php echo isset($row['age']) ? htmlspecialchars($row['age']) : ''; ?>">
     </div>
     <input type="submit" class="btn btn-success" name="Update_students" value="Update">
 </form>

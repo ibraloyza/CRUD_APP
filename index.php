@@ -11,6 +11,7 @@
       <th>id</th>
       <th>first_name</th>
       <th>last_name</th>
+      <th>Email</th>
       <th>age</th>
       <th>Update</th>
       <th>Delete</th>
@@ -30,6 +31,7 @@
                     <td><?php echo $row['id'];?></td>
                     <td><?php echo $row['first_name'];?></td>
                     <td><?php echo $row['last_name'];?></td>
+                    <td><?php echo $row['Email'];?></td>
                     <td><?php echo $row['age'];?></td>
                     <td><a href="update_page1.php?id=<?php echo $row['id'];?>" class="btn btn-success">Update</a></td>
                     <td><a href="delete_page.php?id=<?php echo $row['id'];?>" class="btn btn-danger">Delete</a></td>
@@ -74,20 +76,23 @@
       </div>
       <div class="modal-body">
         
-            <div class="form-group">
-                <label for="f_name">first name</label>
-                <input type="text" name="f_name" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="l_name">last name</label>
-                <input type="text" name="l_name" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="age">Age</label>
-                <input type="text" name="age" class="form-control">
-            </div>
-        
+      <div class="form-group">
+            <label for="f_name">First Name</label>
+            <input type="text" name="f_name" class="form-control">
+        </div>
+         <div class="form-group">
+            <label for="l_name">Last Name</label>
+            <input type="text" name="l_name" class="form-control">
+         </div>
+         <div class="form-group">
+            <label for="Email">Email</label>
+            <input type="email" name="Email" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="text" name="age" class="form-control">
       </div>
+
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <input type="submit" class="btn btn-success" name="Add_students" value="ADD">
